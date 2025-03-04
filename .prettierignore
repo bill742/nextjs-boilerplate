@@ -12,4 +12,3 @@ node_modules
  .nyc_output
  test-results
  junit.xml
- public/docs
