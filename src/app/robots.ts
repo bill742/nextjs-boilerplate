@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             disallow: [],
             userAgent: "*",
         },
-        sitemap: "https://billdean.me/sitemap.xml",
+        sitemap: "https://myawesomewebsite.com/sitemap.xml",
     };
 }
