@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourawesomeurl.com"),
+  metadataBase: new URL("https://nextjs-boilerplate-three-iota-34.vercel.app/"),
   openGraph: {
     description:
       "A boilerplate for creating NextJS projects with TypeScript and Tailwind.",

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             disallow: [],
             userAgent: "*",
         },
-        sitemap: "https://myawesomewebsite.com/sitemap.xml",
+        sitemap: "https://nextjs-boilerplate-three-iota-34.vercel.app/sitemap.xml",
     };
 }
