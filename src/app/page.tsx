@@ -8,7 +8,7 @@ import {
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://nextjs-boilerplate-three-iota-34.vercel.app/",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL,
   },
   description:
     "A boilerplate for creating NextJS projects with TypeScript and Tailwind.",
