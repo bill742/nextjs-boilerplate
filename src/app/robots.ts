@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             disallow: [],
             userAgent: "*",
         },
-        sitemap: "https://nextjs-boilerplate-three-iota-34.vercel.app/sitemap.xml",
+        sitemap: `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`,
     };
 }

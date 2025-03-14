@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
         {
             lastModified: new Date(),
-            url: "https://nextjs-boilerplate-three-iota-34.vercel.app/",
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
         },
     ];
 }
