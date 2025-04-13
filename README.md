@@ -1,5 +1,5 @@
-# nextjs-boilerplate
+# NextJS Project Boilerplate
 
-A boilerplate for creating front-end projects with NextJS, TypeScript,
+A boilerplate I use for creating my personal projects using NextJS, TypeScript,
 and Tailwind. Includes built-in linting and formatting with ESLint and
 Prettier.
