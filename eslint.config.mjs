@@ -1,25 +1,19 @@
 import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import js from "@eslint/js";
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  ignorePatterns: ["node_modules/*", ".next/*", "out/*"],
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
 });
 
 const eslintConfig = [
   ...compat.config({
-    extends: ["next/core-web-vitals", "next/typescript", "prettier"],
+    extends: ["eslint:recommended", "next", "prettier"],
     plugins: ["simple-import-sort", "sort-keys-fix"],
     rules: {
       "no-console": ["warn"],
       "prefer-arrow-callback": ["error"],
       "prefer-template": ["error"],
-      quotes: ["error", "double"],
-      semi: ["error"],
       "simple-import-sort/imports": [
         "warn",
         {
