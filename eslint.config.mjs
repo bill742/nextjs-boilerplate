@@ -1,17 +1,24 @@
 import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
 
 const compat = new FlatCompat({
+  // import.meta.dirname is available after Node.js v20.11.0
   baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
 });
 
 const eslintConfig = [
   ...compat.config({
-    extends: ["eslint:recommended", "next", "prettier"],
+    extends: ["next"],
+    ignorePatterns: ["src/components/ui"],
     plugins: ["simple-import-sort", "sort-keys-fix"],
     rules: {
       "no-console": ["warn"],
+      "no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
       "prefer-arrow-callback": ["error"],
       "prefer-template": ["error"],
       "simple-import-sort/imports": [
