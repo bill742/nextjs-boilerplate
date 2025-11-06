@@ -6,8 +6,12 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    // global ignores applied across the whole project
+    ignores: ["node_modules/*", ".next/*", "out/*"],
+  },
   ...compat.config({
-    extends: ["next"],
+    extends: ["next", "prettier"],
     ignorePatterns: ["src/components/ui"],
     plugins: ["simple-import-sort", "sort-keys-fix"],
     rules: {
