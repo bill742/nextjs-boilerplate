@@ -7,7 +7,7 @@ A boilerplate I use for creating my personal projects using NextJS, TypeScript, 
 - Clone the repoisitory and replace `my-new-project` with your project name
   `git clone git@github.com:bill742/nextjs-boilerplate.git my-new-project`
 
-- Create an `.env` file by making a copy of the `.env.example` file.
+- Create an `.env` file by making a copy of the `.env.example` file. Here you can add values for your site url and site name.
 
 - Install dependencies
   `npm install`
