@@ -12,7 +12,7 @@ const eslintConfig = [
   },
   ...compat.config({
     extends: ["next", "prettier"],
-    ignorePatterns: ["src/components/ui"],
+    ignorePatterns: ["src/components/ui", "seed.spec.ts"],
     plugins: ["simple-import-sort", "sort-keys-fix"],
     rules: {
       "no-console": ["warn"],
