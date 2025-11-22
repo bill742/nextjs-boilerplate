@@ -55,7 +55,11 @@ const icons = [
   },
 ];
 
-export default function Home() {
+/**
+ * Home page component displaying project overview and features
+ * @returns Home page with carousel, features list, and installation instructions
+ */
+const Home = () => {
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <main className="row-start-2 flex flex-col items-center gap-16">
@@ -111,6 +115,32 @@ export default function Home() {
           <li>VS Code settings and recommended extensions</li>
         </ul>
 
+        <section className="h-16" />
+        <h2 className="text-2xl font-bold">Installation:</h2>
+        <ul className="list-disc text-lg">
+          <li>
+            Clone the repoisitory and replace my-new-project with your project
+            name git clone
+            <blockquote>
+              <code>
+                git@github.com:bill742/nextjs-boilerplate.git my-new-project
+              </code>
+            </blockquote>
+          </li>
+
+          <li>
+            Create an .env file by making a copy of the .env.example file. Here
+            you can add values for your site url and site name.
+          </li>
+
+          <li>
+            Install dependencies using npm or your preferred package manager.
+            <code>npm install</code>
+          </li>
+
+          <li>Open a local development server npm run dev</li>
+        </ul>
+
         <Button
           asChild
           variant="secondary"
@@ -129,4 +159,8 @@ export default function Home() {
       </main>
     </div>
   );
-}
+};
+
+Home.displayName = "Home";
+
+export default Home;

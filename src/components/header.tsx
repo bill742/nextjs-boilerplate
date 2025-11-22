@@ -1,6 +1,10 @@
-import { ModeToggle } from "./mode-toggle";
+import ModeToggle from "./mode-toggle";
 
-export default function Header() {
+/**
+ * Header component for site-wide navigation and branding
+ * @returns Header component with site name and theme toggle
+ */
+const Header = () => {
   return (
     <header className="flex items-center justify-between p-6">
       <h1 className="text-3xl font-bold">
@@ -9,4 +13,8 @@ export default function Header() {
       <ModeToggle />
     </header>
   );
-}
+};
+
+Header.displayName = "Header";
+
+export default Header;

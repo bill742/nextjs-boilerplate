@@ -37,11 +37,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+/**
+ * Root layout component for the entire application
+ * @param children - Child components to render
+ * @returns Root layout with theme provider and global components
+ */
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -60,4 +65,8 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+RootLayout.displayName = "RootLayout";
+
+export default RootLayout;
