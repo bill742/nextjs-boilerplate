@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const isProduction = process.env.NEXT_PUBLIC_NODE_ENV === "production";
+  const isProduction = process.env.NEXT_PUBLIC_NODE_ENV === "Production";
 
   if (isProduction) {
     return <HomePageDefault />;
