@@ -22,31 +22,41 @@ import {
 const icons = [
   {
     icon: SiNextdotjs,
+    id: "1",
     label: "NextJS",
   },
   {
     icon: SiTypescript,
+    id: "2",
     label: "TypeScript",
   },
   {
     icon: SiTailwindcss,
+    id: "13",
     label: "Tailwind",
   },
   {
     icon: SiPrettier,
-    label: "Tailwind",
+    id: "4",
+    label: "Prettier",
   },
   {
     icon: SiEslint,
-    label: "Tailwind",
+    id: "5",
+    label: "ESLint",
   },
   {
     icon: VscVscode,
+    id: "6",
     label: "VS Code",
   },
 ];
 
-export default function HomePageDefault() {
+/**
+ * Default home page component displaying project features and installation instructions
+ * @returns Home page with technology carousel, features list, and GitHub link
+ */
+const HomePageDefault = () => {
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <main className="row-start-2 flex flex-col items-center gap-16">
@@ -63,8 +73,8 @@ export default function HomePageDefault() {
           className="w-full max-w-[200px] md:max-w-lg"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {icons.map((icon, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            {icons.map((icon) => (
+              <CarouselItem key={icon.id} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex items-center justify-center p-6 md:aspect-square">
@@ -120,4 +130,8 @@ export default function HomePageDefault() {
       </main>
     </div>
   );
-}
+};
+
+HomePageDefault.displayName = "HomePageDefault";
+
+export default HomePageDefault;
