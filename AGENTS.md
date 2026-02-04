@@ -59,7 +59,6 @@ Currently, no test runner is configured in package.json. Playwright is mentioned
 │       └── sections/     # Page-specific sections
 ├── public/               # Static assets
 ├── .github/              # GitHub configuration
-│   └── copilot-instructions.md
 └── [config files]        # Root-level configuration
 ```
 
