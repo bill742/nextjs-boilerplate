@@ -42,3 +42,6 @@ next-env.d.ts
 
 # backup software files
 .sync.ffs_db
+
+# code review reports
+code-review-report.md
