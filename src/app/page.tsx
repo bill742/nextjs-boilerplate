@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import HomePageDefault from "@/components/home-page-default";
+import LandingPage from "@/components/landing-page";
 
 export const metadata: Metadata = {
   alternates: {
@@ -17,18 +17,26 @@ export const metadata: Metadata = {
 const Home = () => {
   const isProduction = process.env.NEXT_PUBLIC_NODE_ENV === "Production";
 
-  if (isProduction) {
-    return <HomePageDefault />;
-  }
-
   return (
-    <main className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <h2 className="text-2xl font-bold">Welcome to NextJS Boilerplate!</h2>
-      <p>
-        This is a boilerplate for creating NextJS projects with TypeScript and
-        Tailwind.
-      </p>
-    </main>
+    <div className="min-h-screen pt-16">
+      <main className="mx-auto max-w-7xl">
+        {/* /// Delete this block to begin your project. /// */}
+        {isProduction ? (
+          <LandingPage />
+        ) : (
+          <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
+            <h2 className="font-serif text-3xl font-bold text-stone-900 dark:text-stone-50 md:text-4xl">
+              Welcome to NextStarter!
+            </h2>
+            <p>
+              This is a boilerplate for creating NextJS projects with TypeScript
+              and Tailwind.
+            </p>
+          </div>
+        )}
+        {/* ////// */}
+      </main>
+    </div>
   );
 };
 
