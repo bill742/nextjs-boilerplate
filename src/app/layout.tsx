@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     description:
       "A boilerplate for creating NextJS projects with TypeScript and Tailwind.",
     images: "",
-    title: "NextJS Boilerplate",
+    title: "NextStarter",
   },
   title: {
-    default: "NextJS Boilerplate",
-    template: "%s | NextJS Boilerplate",
+    default: "NextStarter",
+    template: "%s | NextStarter",
   },
   twitter: {
     card: "summary_large_image",
