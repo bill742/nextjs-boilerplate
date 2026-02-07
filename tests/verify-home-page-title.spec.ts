@@ -12,6 +12,6 @@ test.describe("Page Title and Document Structure", () => {
     const title = await page.title();
 
     // 3. Verify the page title is displayed in the browser tab
-    expect(title).toBe("NextJS Boilerplate");
+    expect(title).toBe("NextStarter");
   });
 });
