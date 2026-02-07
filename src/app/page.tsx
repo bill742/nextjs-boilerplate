@@ -24,8 +24,8 @@ const Home = () => {
         {isProduction ? (
           <LandingPage />
         ) : (
-          <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-            <h2 className="font-serif text-3xl font-bold text-stone-900 dark:text-stone-50 md:text-4xl">
+          <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-(family-name:--font-geist-sans) sm:p-20">
+            <h2 className="font-serif text-3xl font-bold text-stone-900 md:text-4xl dark:text-stone-50">
               Welcome to NextStarter!
             </h2>
             <p>

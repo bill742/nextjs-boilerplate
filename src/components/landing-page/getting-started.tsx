@@ -10,7 +10,7 @@ const GettingStarted = () => {
       id="getting-started"
     >
       <div className="space-y-8">
-        <h2 className="text-center font-serif text-3xl font-bold text-stone-900 dark:text-stone-50 md:text-4xl">
+        <h2 className="text-center font-serif text-3xl font-bold text-stone-900 md:text-4xl dark:text-stone-50">
           Getting Started
         </h2>
 
@@ -31,7 +31,7 @@ const GettingStarted = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="dark:to-coral-600 bg-gradient-to-r from-orange-700 to-orange-600 pl-4 pr-4 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] dark:from-orange-600"
+                  className="dark:to-coral-600 bg-linear-to-r from-orange-700 to-orange-600 pr-4 pl-4 font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.98] dark:from-orange-600"
                   aria-label="View on GitHub"
                 >
                   <Link

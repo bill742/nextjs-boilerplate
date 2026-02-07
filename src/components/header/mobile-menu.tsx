@@ -56,7 +56,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
       {/* Mobile menu panel */}
       <div
-        className={`fixed top-0 right-0 z-50 flex h-screen w-[280px] flex-col border-l border-stone-200/50 bg-white/95 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:hidden dark:border-stone-800/50 dark:bg-stone-950/95 ${
+        className={`fixed top-0 right-0 z-50 flex h-screen w-70 flex-col border-l border-stone-200/50 bg-white/95 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:hidden dark:border-stone-800/50 dark:bg-stone-950/95 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

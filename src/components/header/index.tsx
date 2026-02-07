@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "border-b border-stone-200/50 bg-white/80 shadow-sm backdrop-blur-md dark:border-stone-800/50 dark:bg-stone-950/80"
           : "border-b border-transparent bg-transparent"
@@ -51,7 +51,7 @@ const Header = () => {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 transition-colors hover:bg-stone-50 dark:border-stone-800 dark:hover:bg-stone-900 md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-stone-200 transition-colors hover:bg-stone-50 md:hidden dark:border-stone-800 dark:hover:bg-stone-900"
             aria-label="Open menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -76,7 +76,7 @@ const Header = () => {
 
       {/* Animated border accent */}
       <div
-        className={`absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-opacity duration-300 ${
+        className={`h-[px absolute bottom-0 left-0 bg-linear-to-r from-transparent via-orange-500 to-transparent transition-opacity duration-300 ${
           isScrolled ? "w-full opacity-100" : "w-0 opacity-0"
         }`}
       />

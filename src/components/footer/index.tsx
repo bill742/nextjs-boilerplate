@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand column */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="dark:to-coral-600 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-orange-700 to-orange-600 shadow-sm dark:from-orange-600">
+              <div className="dark:to-coral-600 flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-orange-700 to-orange-600 shadow-sm dark:from-orange-600">
                 <div className="h-4 w-4 rounded-sm border-2 border-white/40" />
               </div>
               <span className="font-serif text-lg font-bold text-stone-900 dark:text-stone-50">
@@ -91,7 +91,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="mt-12 border-t border-stone-200 pt-8 dark:border-stone-800">
-          <div className="flex flex-col items-center justify-between gap-4 text-sm text-stone-600 dark:text-stone-400 md:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 text-sm text-stone-600 md:flex-row dark:text-stone-400">
             <p>
               © {currentYear} {process.env.NEXT_PUBLIC_SITE_NAME}. All rights
               reserved.

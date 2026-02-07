@@ -21,7 +21,7 @@ const QuickLinks = () => {
             aria-label={link.label}
           >
             {link.label}
-            <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></div>
+            <div className="bg-primary absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full"></div>
           </button>
         </li>
       ))}

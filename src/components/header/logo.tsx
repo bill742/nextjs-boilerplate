@@ -7,7 +7,7 @@ const Logo = () => {
       className="group flex items-center gap-2 transition-transform hover:scale-[1.02]"
     >
       {/* Logo mark - geometric accent */}
-      <div className="dark:to-coral-600 relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-orange-700 to-orange-600 shadow-sm transition-transform group-hover:rotate-12 group-hover:shadow-md dark:from-orange-600">
+      <div className="dark:to-coral-600 relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-linear-to-br from-orange-700 to-orange-600 shadow-sm transition-transform group-hover:rotate-12 group-hover:shadow-md dark:from-orange-600">
         <div className="h-4 w-4 rounded-sm border-2 border-white/40" />
       </div>
 
