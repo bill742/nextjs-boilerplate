@@ -46,7 +46,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://github.com/bill742/nextjs-boilerplate"
+                  href="https://github.com/bill742/nextstarter"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-stone-600 transition-colors hover:text-orange-600 dark:text-stone-400 dark:hover:text-orange-400"
@@ -98,7 +98,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-6">
               <a
-                href="https://github.com/bill742/nextjs-boilerplate"
+                href="https://github.com/bill742/nextstarter"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-orange-600 dark:hover:text-orange-400"

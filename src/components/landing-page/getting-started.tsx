@@ -30,7 +30,7 @@ const GettingStarted = () => {
                   Clone the repository
                 </p>
                 {/* <code className="block rounded bg-stone-100 p-2 text-sm text-stone-700 dark:bg-stone-800 dark:text-stone-300">
-                      git clone git@github.com:bill742/nextjs-boilerplate.git
+                      git clone git@github.com:bill742/nextstarter.git
                       my-new-project
                     </code> */}
                 <Button
@@ -40,7 +40,7 @@ const GettingStarted = () => {
                   aria-label="View on GitHub"
                 >
                   <Link
-                    href="https://github.com/bill742/nextjs-boilerplate"
+                    href="https://github.com/bill742/nextstarter"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
