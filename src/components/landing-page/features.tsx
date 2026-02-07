@@ -5,10 +5,10 @@ const Features = () => {
     <>
       <section className="mx-auto max-w-5xl px-6 py-24 md:py-32" id="features">
         <div className="space-y-8">
-          <h2 className="text-center font-serif text-3xl font-bold text-stone-900 dark:text-stone-50 md:text-4xl">
+          <h2 className="text-center font-serif text-3xl font-bold text-stone-900 md:text-4xl dark:text-stone-50">
             Features
           </h2>
-          <ul className="grid gap-4 text-stone-600 dark:text-stone-300 md:grid-cols-2 md:gap-6">
+          <ul className="grid gap-4 text-stone-600 md:grid-cols-2 md:gap-6 dark:text-stone-300">
             <FeatureItem content="ESLint config and rules" />
             <FeatureItem content="Prettier configuration setup for Tailwind" />
             <FeatureItem
@@ -22,10 +22,11 @@ const Features = () => {
             <FeatureItem content="Custom 404 page" />
             <FeatureItem content="Robots and Sitemap files" />
             <FeatureItem content="VS Code settings and recommended extensions" />
+            <FeatureItem content="GitHub Actions workflow" />
           </ul>
         </div>
       </section>
-      <div className="mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-stone-200 to-transparent dark:via-stone-800" />
+      <div className="mx-auto h-px w-full max-w-5xl bg-linear-to-r from-transparent via-stone-200 to-transparent dark:via-stone-800" />
     </>
   );
 };
