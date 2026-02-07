@@ -78,7 +78,7 @@ const Stack = () => {
             opts={{
               align: "start",
             }}
-            className="w-full max-w-[200px] self-center md:hidden md:max-w-lg"
+            className="w-full max-w-50 self-center md:hidden md:max-w-lg"
             id="stack"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -109,7 +109,7 @@ const Stack = () => {
           </Carousel>
         </div>
       </section>
-      <div className="mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-stone-200 to-transparent dark:via-stone-800" />
+      <div className="mx-auto h-px w-full max-w-5xl bg-linear-to-r from-transparent via-stone-200 to-transparent dark:via-stone-800" />
     </>
   );
 };
