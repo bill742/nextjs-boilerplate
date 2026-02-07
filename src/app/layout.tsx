@@ -26,22 +26,27 @@ export const metadata: Metadata = {
     description:
       "A boilerplate for creating NextJS projects with TypeScript and Tailwind.",
     images: "",
-    title: "NextJS Boilerplate",
+    title: "NextStarter",
   },
   title: {
-    default: "NextJS Boilerplate",
-    template: "%s | NextJS Boilerplate",
+    default: "NextStarter",
+    template: "%s | NextStarter",
   },
   twitter: {
     card: "summary_large_image",
   },
 };
 
-export default function RootLayout({
+/**
+ * Root layout component for the entire application
+ * @param children - Child components to render
+ * @returns Root layout with theme provider and global components
+ */
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -60,4 +65,8 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+RootLayout.displayName = "RootLayout";
+
+export default RootLayout;

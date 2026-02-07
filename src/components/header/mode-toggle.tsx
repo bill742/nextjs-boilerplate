@@ -2,7 +2,7 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,13 +12,19 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export function ModeToggle() {
+/**
+ * Theme toggle component for switching between light and dark modes
+ * @returns Toggle button with tooltip for theme switching
+ */
+const ModeToggle = () => {
   const { theme, setTheme } = useTheme();
 
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Use useSyncExternalStore to check if we're mounted (avoids setState in useEffect)
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   if (!mounted) return null;
 
@@ -29,6 +35,7 @@ export function ModeToggle() {
           <Button
             variant={"outline"}
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
             {theme === "dark" ? (
               <Sun className="h-4 w-4" />
@@ -43,4 +50,8 @@ export function ModeToggle() {
       </Tooltip>
     </TooltipProvider>
   );
-}
+};
+
+ModeToggle.displayName = "ModeToggle";
+
+export default ModeToggle;

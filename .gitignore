@@ -42,3 +42,15 @@ next-env.d.ts
 
 # backup software files
 .sync.ffs_db
+
+# code review reports
+code-review-report.md
+
+# hero demo design test
+/src/app/hero-demo/*
+
+tailwind.config.ts.backup
+
+# hide agent skill files and documentation for the time being
+.agents/*
+src/lib/README.md
