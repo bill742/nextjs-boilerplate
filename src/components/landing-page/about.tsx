@@ -1,3 +1,8 @@
+/**
+ * About section component
+ * Describes the purpose and features of the Next.js boilerplate project
+ * @returns About section with project description and call-to-action
+ */
 const About = () => {
   return (
     <>

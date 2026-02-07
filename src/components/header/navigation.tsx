@@ -6,6 +6,11 @@ export const navigationItems = [
   { href: "#features", id: 1, label: "Features" },
 ];
 
+/**
+ * Main navigation component for header
+ * Renders navigation links that smoothly scroll to page sections
+ * @returns Navigation menu with smooth scroll buttons (hidden on mobile)
+ */
 const Navigation = () => {
   return (
     <nav className="hidden items-center gap-6 md:flex">

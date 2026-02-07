@@ -49,16 +49,21 @@ const icons = [
   },
 ];
 
+/**
+ * Technology stack showcase component
+ * Displays the tech stack used in the project with icons in both grid (desktop) and carousel (mobile) layouts
+ * @returns Tech stack section with responsive icon display
+ */
 const Stack = () => {
   return (
     <>
       <section
-        className="bg-stone-50/50 py-24 dark:bg-stone-900/30 md:py-32"
+        className="bg-stone-50/50 py-24 md:py-32 dark:bg-stone-900/30"
         id="stack"
       >
         <div className="mx-auto max-w-5xl px-6"></div>
         <div className="flex w-full flex-col gap-8">
-          <h2 className="text-center font-serif text-3xl font-bold text-stone-900 dark:text-stone-50 md:text-4xl">
+          <h2 className="text-center font-serif text-3xl font-bold text-stone-900 md:text-4xl dark:text-stone-50">
             Tech Stack
           </h2>
           <ul className="hidden list-disc gap-8 text-lg md:grid md:grid-cols-3">

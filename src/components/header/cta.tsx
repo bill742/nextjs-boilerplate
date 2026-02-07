@@ -1,5 +1,10 @@
 import { scrollToSection } from "@/lib/utils";
 
+/**
+ * Call-to-action button component for header
+ * Scrolls to the getting started section when clicked
+ * @returns CTA button that navigates to getting started section
+ */
 const Cta = () => {
   return (
     <button

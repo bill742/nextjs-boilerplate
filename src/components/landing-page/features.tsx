@@ -1,5 +1,10 @@
 import FeatureItem from "./feature-item";
 
+/**
+ * Features section component
+ * Displays a grid of project features and capabilities
+ * @returns Features section with heading and feature list grid
+ */
 const Features = () => {
   return (
     <>

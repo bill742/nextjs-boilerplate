@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+/**
+ * Site logo component
+ * Displays the site branding with an animated geometric icon and site name
+ * @returns Clickable logo that links to homepage with hover effects
+ */
 const Logo = () => {
   return (
     <Link

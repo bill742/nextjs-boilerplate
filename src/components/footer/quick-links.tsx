@@ -9,6 +9,11 @@ const quickLinkItems = [
   { href: "#getting-started", id: 4, label: "Getting Started" },
 ];
 
+/**
+ * Quick navigation links component for footer
+ * Renders a list of clickable links that smoothly scroll to different sections of the page
+ * @returns List of quick navigation links with hover effects
+ */
 const QuickLinks = () => {
   return (
     <ul className="space-y-2 text-sm">

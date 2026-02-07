@@ -3,6 +3,11 @@ import { SiGithub } from "react-icons/si";
 
 import { Button } from "@/components/ui/button";
 
+/**
+ * Getting started guide component
+ * Provides step-by-step instructions for setting up and running the project
+ * @returns Getting started section with numbered steps and GitHub link
+ */
 const GettingStarted = () => {
   return (
     <section
