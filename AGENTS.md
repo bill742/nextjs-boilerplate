@@ -137,6 +137,48 @@ import Header from "@/components/header";
   - Browser-only APIs
   - Third-party libraries requiring client-side
 
+**Component Organization**:
+
+- **Separation of Concerns**: Extract features into separate components for better maintainability
+- **Component Directories**: For complex components with sub-components, create a directory:
+  ```
+  components/
+    header/
+      index.tsx        # Main component
+      navigation.tsx   # Sub-component
+      logo.tsx         # Sub-component (optional)
+  ```
+- **Co-location**: Keep related components together in the same directory
+- **Shared Logic**: Extract reusable logic, data, and constants into separate files:
+  - Export arrays/objects of configuration data
+  - Share types between related components
+  - Keep index.tsx as the main export
+
+**Example Structure**:
+
+```typescript
+// header/navigation.tsx
+export const navigationItems = [
+  { id: 1, label: "Features", href: "#features" },
+  { id: 2, label: "Pricing", href: "#pricing" },
+];
+
+const Navigation = () => { /* ... */ };
+export default Navigation;
+
+// header/index.tsx
+import Navigation from "./navigation";
+
+const Header = () => {
+  return (
+    <header>
+      <Navigation />
+    </header>
+  );
+};
+export default Header;
+```
+
 **Component Template**:
 
 ```typescript
@@ -212,7 +254,7 @@ export default MyComponent;
 - Export `metadata` object from page components
 - Include: title, description, Open Graph tags, Twitter cards
 - Set canonical URLs using `alternates.canonical`
-- Use template for page titles: `%s | NextJS Boilerplate`
+- Use template for page titles: `%s | NextStarter`
 - Metadata base URL: `process.env.NEXT_PUBLIC_SITE_URL`
 
 ---
