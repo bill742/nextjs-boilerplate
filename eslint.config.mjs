@@ -1,4 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
+import next from "eslint-config-next";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
 const compat = new FlatCompat({
   // import.meta.dirname is available after Node.js v20.11.0
@@ -6,14 +9,25 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  ...nextCoreWebVitals,
+  ...nextTypescript,
   {
     // global ignores applied across the whole project
-    ignores: ["node_modules/*", ".next/*", "out/*"],
+    ignores: [
+      "node_modules/*",
+      ".next/*",
+      "out/*",
+      "tailwind.config.js",
+      "postcss.config.js",
+      "src/app/hero-demo/*",
+    ],
   },
+  ...next,
   ...compat.config({
     extends: ["next", "prettier"],
     ignorePatterns: ["src/components/ui", "seed.spec.ts"],
     plugins: ["simple-import-sort", "sort-keys-fix"],
+
     rules: {
       "no-console": ["warn"],
       "no-unused-vars": [
