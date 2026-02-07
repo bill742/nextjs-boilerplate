@@ -1,12 +1,13 @@
 {
-  "name": "nextjs-boilerplate",
+  "name": "nextstarter",
   "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "npx playwright test"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.16",
@@ -34,7 +35,7 @@
     "@eslint/eslintrc": "^3",
     "@eslint/js": "^9.28.0",
     "@next/eslint-plugin-next": "^15.3.3",
-    "@playwright/test": "^1.56.1",
+    "@playwright/test": "^1.58.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
