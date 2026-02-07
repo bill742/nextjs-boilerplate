@@ -94,12 +94,13 @@ echo "🔍 Checking JSDoc documentation..."
 JSDOC_ISSUES=0
 for file in $FILES; do
   if echo "$file" | grep -q "\.tsx$"; then
-    # Count component declarations
-    COMPONENTS=$(grep -c "^const.*=.*() =>" "$file" 2>/dev/null || echo "0")
+    # Count component declarations (handle multiple matches properly)
+    COMPONENTS=$(grep "^const.*=.*() =>" "$file" 2>/dev/null | wc -l | tr -d ' ')
     # Count JSDoc comments
-    JSDOCS=$(grep -c "/\*\*" "$file" 2>/dev/null || echo "0")
+    JSDOCS=$(grep "/\*\*" "$file" 2>/dev/null | wc -l | tr -d ' ')
     
-    if [ "$COMPONENTS" -gt "$JSDOCS" ]; then
+    # Only check if there are components in the file
+    if [ "$COMPONENTS" -gt 0 ] && [ "$COMPONENTS" -gt "$JSDOCS" ]; then
       echo -e "${RED}ERROR${NC}: $file - Missing JSDoc comments"
       ERRORS=$((ERRORS + 1))
       JSDOC_ISSUES=$((JSDOC_ISSUES + 1))
@@ -150,7 +151,11 @@ echo ""
 echo "🔍 Running ESLint..."
 cd "$PROJECT_ROOT"
 ESLINT_OUTPUT=$(npm run lint 2>&1 || true)
-if echo "$ESLINT_OUTPUT" | grep -q "✔ No ESLint warnings or errors"; then
+ESLINT_EXIT_CODE=$?
+
+# ESLint returns 0 when no issues, non-zero when issues found
+# Empty output (besides npm run message) means no issues
+if [ $ESLINT_EXIT_CODE -eq 0 ] && ! echo "$ESLINT_OUTPUT" | grep -qE "error|warning.*problems"; then
   echo -e "   ${GREEN}✓${NC} ESLint passed with no errors"
 else
   echo -e "${YELLOW}WARNING${NC}: ESLint found issues"
