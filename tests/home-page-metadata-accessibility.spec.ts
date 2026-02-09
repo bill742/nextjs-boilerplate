@@ -18,7 +18,7 @@ test.describe("Homepage does not have accessiblity issues", () => {
     const themeToggle = page.locator("#themeToggle");
     await themeToggle.first().click();
     console.log("Switching to Dark mode for accessibility testing");
-    // await page.getByRole("menuitem", { name: "Dark" }).click();
+
     const darkModeAccessibilityScanResults = await new AxeBuilder({
       page,
     }).analyze();
@@ -26,15 +26,28 @@ test.describe("Homepage does not have accessiblity issues", () => {
   });
 });
 
-test.describe("Page Title and Document Structure", () => {
-  test("Verify Home Page Title", async ({ page }) => {
-    // 1. Navigate to the home page (/)
+test.describe("Page Metadata and Document Structure", () => {
+  test("Verify Home Page Metadata", async ({ page }) => {
     await page.goto("/");
 
-    // 2. Inspect the document title
-    const title = await page.title();
+    console.log("Checking metadata on homepage");
 
-    // 3. Verify the page title is displayed in the browser tab
+    const lang = await page.locator("html").getAttribute("lang");
+    expect(lang).toBe("en");
+
+    const title = await page.title();
     expect(title).toBe("NextStarter");
+
+    const descriptionMeta = await page
+      .locator('meta[name="description"]')
+      .getAttribute("content");
+    expect(descriptionMeta).toBe(
+      "A boilerplate for creating NextJS projects with TypeScript and Tailwind."
+    );
+
+    const canonicalLink = await page
+      .locator('link[rel="canonical"]')
+      .getAttribute("href");
+    expect(canonicalLink).toBe(process.env.NEXT_PUBLIC_SITE_URL);
   });
 });
