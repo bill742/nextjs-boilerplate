@@ -13,8 +13,10 @@ test.describe("Page Title and Document Structure", () => {
     await expect(header).toBeVisible();
 
     // 3. Verify the heading level and content
-    const h1 = await page.locator("header h1").textContent();
-    expect(h1?.trim()).toBe("NextStarter");
+    const h1 = await page.locator("h1").textContent();
+    expect(h1?.trim()).toBe(
+      "NextStarter - A boilerplate for creating NextJS projects with TypeScript and Tailwind."
+    );
 
     const h2 = await page.locator("main h2, header h2").first().textContent();
     expect(h2?.trim()).toBe("About NextStarter");
